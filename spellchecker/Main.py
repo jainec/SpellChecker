@@ -25,8 +25,11 @@ def consultUser(currentWord, mainDict, ignored):
 #Copy all words and punctuation from the input document to the output document
 #but ask the user what to do with any words that are unknown        
 def processDocument(mainDict, ignored):
-    inDoc = open('in.txt', 'r')
-    outDoc = open('out.txt', 'w')
+    try:
+        inDoc = open('in.txt', 'r')
+        outDoc = open('out.txt', 'w')
+    except:
+        print("Problema ao abrir o arquivo!")
     words = inDoc.readlines()
     for line in words:
         for currentWord in line.split():
@@ -47,5 +50,5 @@ if __name__ == '__main__':
         processDocument(mainDict, ignored)
         mainDict.save('main-dict.txt')
     except:
-        print("ferrou")
+        print("Erro!")
     

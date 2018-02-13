@@ -109666,6 +109666,7 @@ vizoring
 vizors
 vizsla
 vizslas
+voar
 vocable
 vocables
 vocably

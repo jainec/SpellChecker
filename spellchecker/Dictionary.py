@@ -27,3 +27,5 @@ class Dictionary(object):
     #Add a word wd to this dictionary            
     def add(self, wd):
         self.dict.append(wd+"\n")
+        
+        
