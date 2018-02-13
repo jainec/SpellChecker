@@ -33,8 +33,8 @@ def processDocument(mainDict, ignored):
     words = inDoc.readlines()
     for line in words:
         for currentWord in line.split():
-            if not mainDict.contains(currentWord) and not ignored.contains(currentWord):
-                currentWord = consultUser(currentWord, mainDict, ignored)
+            if not mainDict.contains(currentWord.lower()) and not ignored.contains(currentWord.lower()):
+                currentWord = consultUser(currentWord.lower(), mainDict, ignored)
             outDoc.write(currentWord+" ")
     inDoc.close()
     outDoc.close()        
